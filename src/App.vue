@@ -12,6 +12,7 @@
     </header>
     <main>
       <router-view></router-view>
+      <i class="fas fa-plus-circle"></i>
     </main>
   </div>
 </template>
@@ -23,6 +24,13 @@ export default {
 </script>
 
 <style>
+.fa-plus-circle{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 40px;
+  cursor: pointer;
+}
 body {
   margin: 0;
 }
@@ -30,14 +38,16 @@ a{
   color: #fff;
   text-decoration: none;
 }
-ul{
+header ul{
   float: left;
 }
-ul li{
+
+header ul li{
   padding: 10px;
   list-style: none;
   display: inline;
 }
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

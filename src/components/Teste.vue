@@ -1,16 +1,24 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <h1>{{ info }}</h1>
   </div>
 </template>
 
 <script>
+const axios = require('axios');
+
 export default {
+
   name: 'teste',
   data () {
     return {
-      msg: 'teste'
+      info: null
     }
+  },
+  mounted () {
+    axios
+      .get('static/dados.json')
+      .then(response => (this.info = response))
   }
 }
 </script>
