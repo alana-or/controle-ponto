@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <div class="fundoPreto" v-on:click="seen = !seen"></div>
     <header>
       <ul>
         <li>
@@ -12,7 +13,6 @@
     </header>
     <main>
       <router-view></router-view>
-      <i class="fas fa-plus-circle"></i>
     </main>
   </div>
 </template>
@@ -24,12 +24,11 @@ export default {
 </script>
 
 <style>
-.fa-plus-circle{
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  font-size: 40px;
-  cursor: pointer;
+.fundoPreto{
+  background: #00000070;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 body {
   margin: 0;

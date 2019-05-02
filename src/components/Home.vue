@@ -1,21 +1,37 @@
 <template>
   <div>
-    <CardHorario />
+    <Horario />
+    <Novo />
+    <i class="fas fa-plus-circle" @click="novo"></i>
   </div>
 </template>
 
 <script>
-import CardHorario from '@/components/CardHorario'
+import Horario from '@/components/Horario'
+import Novo from '@/components/Novo'
 
 export default {
   components: {
-    CardHorario
+    Horario,
+    Novo
+  },
+  methods:{
+    novo: function () {
+      this.$refs["fundoPreto"]
+    }
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
+.fa-plus-circle{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 40px;
+  cursor: pointer;
+}
+
 h1, h2 {
   font-weight: normal;
 }
